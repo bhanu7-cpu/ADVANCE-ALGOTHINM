@@ -1,0 +1,129 @@
+#include <iostream>
+using namespace std ;
+
+class node
+{
+
+  Public :
+             int row;
+              int col;   
+              intdata; 
+            Node *link;
+            Node( ) {
+
+          }
+
+};
+
+
+
+void create _new_node (node *  &p, int row_ index,
+                                             int col _index, int data)
+
+{
+
+
+       Node  *temp =p;
+       Node *r;
+
+     if (temp  ==  NULL)
+{
+ 
+      temp =new node ( );
+      temp ->row =row_index;
+      temp ->col=col_index;
+      temp-> date=date;
+      temp-> link=NULL;
+               p=temp;
+
+}
+
+      else 
+{
+     while (temp link  ! =NULL)
+    temp = temp -> link;
+
+
+   r=new node( );
+   r->row =row_index ;
+   r->col= col_index;
+   r-> data =data;
+   r->link= NULL;
+   temp->link=r ;
+      }
+
+}
+
+
+   Void printList(Node *start)
+}
+
+  cout<<’’\n\n Linked List representation of Sparse  Matrix  \n\n”;
+  node *ptr =  start;
+  cout<< “\trow position        :     “:
+ while   (ptr   != NULL)
+{
+
+Cout << ptr->row <<   “  “;
+ptr = ptr->link;
+
+}
+
+cout << end1;
+cout << “\tcolumn_position    :   “;
+
+
+   ptr  =  Start; 
+  while  (ptr   != NULL )
+
+{
+
+  cout << ptr->col << “ “;
+   ptr= ptr ->link;
+
+}
+
+cout << end1;
+cout<< “\t value 
+ptr = start ;
+
+ While  (ptr  !=NULL)
+{
+    cout <<ptr->data << “ “;
+    ptr = pt[node * printList: :ptr]
+}
+cout<<end1<<end1<<end1<<end1;
+
+}
+
+int main ( )
+
+{
+
+   int sparseMatrix[4][5] ={0 , 0 , 3 , 0 , 4 },
+		{0 , 0 , 5 , 7 , 0 },
+		{0 , 0 , 0 , 0 , 0 },
+		{0 , 2 , 6 , 0 , 0 }
+	};
+
+Node * Start  = NULL;
+for (int i=0, i<4;	i++)
+{
+     for (j=0, j<4, j++)
+{
+
+
+   if (sparse matrix [i] [j]  ! = 0)
+     create _new_node(start,  i,, j,
+                                         sparse Matrix[i] [j] );
+
+       }
+} 
+ 
+printList(Start);
+   
+return 0;
+}	
+
+
+
